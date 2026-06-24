@@ -1,0 +1,99 @@
+/* Контейнер на весь экран, работающий как фоновая подложка */
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4); /* Идентично вашему modal-overlay */
+  font-family: inherit;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Карточка формы, повторяющая стиль вашего модального окна */
+.auth-form {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 12px; /* Мягкое скругление */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); /* Плавная тень */
+  width: 100%;
+  max-width: 400px; /* Оптимальная ширина для форм входа */
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 16px; /* Равномерный отступ между элементами */
+}
+
+/* Заголовок формы */
+.auth-form h2 {
+  margin: 0 0 8px 0;
+  color: #333333;
+  font-size: 24px;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* Стили для текстовых полей ввода */
+.auth-form input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #cccccc;
+  border-radius: 6px;
+  font-size: 15px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  box-sizing: border-box;
+  outline: none;
+}
+
+/* Фокус на инпуте (изменяет цвет рамки) */
+.auth-form input:focus {
+  border-color: #007bff; /* Стандартный синий (или замените на ваш акцентный цвет) */
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.15);
+}
+
+/* Блок с ошибкой бэкенда или валидации */
+.auth-error {
+  background-color: #ffeef0;
+  border: 1px solid #fdb8c0;
+  color: #d73a49;
+  padding: 10px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+/* Ссылки для переключения между Входом и Регистрацией */
+.auth-form p {
+  margin: 8px 0 0 0;
+  font-size: 14px;
+  color: #666666;
+  text-align: center;
+}
+
+.auth-form p a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.auth-form p a:hover {
+  text-decoration: underline;
+}
+
+/* Кнопка отправки формы — наследует ваш класс primary-button */
+.auth-form .primary-button {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  background-color: #007bff; /* Если у вас в общем CSS прописан primary-button, это свойство можно удалить */
+  color: white;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+}
+
+.auth-form .primary-button:hover {
+  background-color: #0056b3;
+}
