@@ -29,6 +29,7 @@ class SubjectSerializer(serializers.ModelSerializer):
     class Meta:
         model = Subject
         fields = "__all__"
+        read_only_fields = ("author",)
 
 
 class TaskSerializer(serializers.ModelSerializer):

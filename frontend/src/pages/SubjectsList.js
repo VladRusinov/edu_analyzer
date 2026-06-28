@@ -13,6 +13,12 @@ export default function SubjectsList() {
 
   const navigate = useNavigate();
 
+  const handleLogout = () => {
+    localStorage.removeItem("access");
+    localStorage.removeItem("refresh");
+
+    navigate("/login");
+  };
   useEffect(() => {
     apiGet("/subjects/").then(setSubjects);
   }, []);
@@ -50,6 +56,12 @@ export default function SubjectsList() {
           onClick={() => setShowCreateModal(true)}
         >
           + Создать предмет
+        </button>
+        <button
+          className="logout-button"
+          onClick={handleLogout}
+        >
+          Выйти
         </button>
       </div>
 

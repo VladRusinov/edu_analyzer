@@ -23,6 +23,12 @@
   gap: 10px;
 }
 
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
 .subject-title {
   text-align: center;
   font-size: 24px;

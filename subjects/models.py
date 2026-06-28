@@ -1,4 +1,5 @@
 from django.db import models
+from django.conf import settings
 from django.contrib.auth.models import AbstractUser, BaseUserManager
 
 
@@ -33,6 +34,11 @@ class User(AbstractUser):
 
 class Subject(models.Model):
     name = models.CharField(max_length=255)
+    author = models.ForeignKey(
+        settings.AUTH_USER_MODEL,
+        on_delete=models.CASCADE,
+        related_name="subjects"
+    )
     threshold_mean_low = models.FloatField(
         default=3.5
     )

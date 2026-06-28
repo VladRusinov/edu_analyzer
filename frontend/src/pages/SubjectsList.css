@@ -178,3 +178,23 @@
   cursor: pointer;
   font-size: 18px;
 }
+
+.logout-button {
+  background: #ff4d4f;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.2s ease;
+}
+
+.logout-button:hover {
+  background: #d9363e;
+  transform: translateY(-1px);
+}
+
+.logout-button:active {
+  transform: translateY(0px);
+}
